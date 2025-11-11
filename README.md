@@ -127,5 +127,6 @@ Issue や Pull Request を歓迎します！
 
 ## 🔗 リンク
 
-- [デモサイト](https://password-generator.pages.dev)
+- [本番サイト](https://password-generator.kojin.works/)
+- [デモサイト（Cloudflare Pages）](https://password-generator.pages.dev)
 - [GitHubリポジトリ](https://github.com/noricha-vr/password-generator)
