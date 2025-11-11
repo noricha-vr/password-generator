@@ -34,20 +34,20 @@ export function PasswordCard({ title, description, value }: PasswordCardProps) {
         <p className="text-sm text-gray-600 dark:text-gray-400">{description}</p>
       </div>
 
-      <div className="bg-gray-50 dark:bg-gray-900 rounded-md p-4 mb-4 font-mono text-sm break-all">
+      <div className="bg-neutral/10 dark:bg-gray-900 rounded-md p-4 mb-4 font-mono text-sm break-all">
         <code className="text-gray-800 dark:text-gray-200">{value}</code>
       </div>
 
       <div className="flex gap-2">
         <button
           onClick={handleCopy}
-          className="flex-1 bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md transition-colors"
+          className="flex-1 bg-accent hover:bg-accent-hover text-white font-medium py-2 px-4 rounded-md transition-colors"
         >
           {copied ? '✓ コピー完了' : 'コピー'}
         </button>
         <button
           onClick={handleDownload}
-          className="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-md transition-colors"
+          className="bg-primary hover:bg-primary-hover text-white font-medium py-2 px-4 rounded-md transition-colors"
           title="テキストファイルとしてダウンロード"
         >
           保存

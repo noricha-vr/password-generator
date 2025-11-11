@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #3BB073;
+  --color-primary-hover: #2f9960;
+  --color-secondary: #4BC3B1;
+  --color-secondary-hover: #3ba896;
+  --color-accent: #44B0C1;
+  --color-accent-hover: #3691a0;
+  --color-highlight: #BED685;
+  --color-neutral: #DBC794;
+}
+
 @layer base {
   body {
     margin: 0;

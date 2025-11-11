@@ -113,7 +113,7 @@ function App() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-highlight/20 to-neutral/30 dark:from-gray-900 dark:to-gray-800 py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -125,13 +125,13 @@ function App() {
           <div className="flex gap-4 justify-center">
             <button
               onClick={generateAllPasswords}
-              className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-colors"
+              className="bg-primary hover:bg-primary-hover text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-colors"
             >
               🔄 すべて再生成
             </button>
             <button
               onClick={() => downloadAllPasswords(passwords)}
-              className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-colors"
+              className="bg-secondary hover:bg-secondary-hover text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-colors"
             >
               💾 すべてダウンロード
             </button>
