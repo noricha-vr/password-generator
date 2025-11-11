@@ -127,5 +127,5 @@ Issue や Pull Request を歓迎します！
 
 ## 🔗 リンク
 
-- [デモサイト](https://hash-creator.pages.dev)
-- [GitHubリポジトリ](https://github.com/noricha-vr/hash-creator)
+- [デモサイト](https://password-generator.pages.dev)
+- [GitHubリポジトリ](https://github.com/noricha-vr/password-generator)
