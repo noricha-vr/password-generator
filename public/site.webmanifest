@@ -1,0 +1,20 @@
+{
+  "name": "ランダムパスワード生成ツール",
+  "short_name": "パスワード生成",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#4F46E5",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "description": "完全クライアントサイドで動作する安全なパスワード生成ツール"
+}
