@@ -5,13 +5,12 @@ interface PasswordCardProps {
   title: string
   description: string
   value: string
-  onRegenerate: () => void
 }
 
 /**
  * パスワード表示カードコンポーネント
  */
-export function PasswordCard({ title, description, value, onRegenerate }: PasswordCardProps) {
+export function PasswordCard({ title, description, value }: PasswordCardProps) {
   const [copied, setCopied] = useState(false)
 
   const handleCopy = async () => {
@@ -51,13 +50,7 @@ export function PasswordCard({ title, description, value, onRegenerate }: Passwo
           className="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-md transition-colors"
           title="テキストファイルとしてダウンロード"
         >
-          💾
-        </button>
-        <button
-          onClick={onRegenerate}
-          className="bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 font-medium py-2 px-4 rounded-md transition-colors"
-        >
-          🔄
+          保存
         </button>
       </div>
     </div>

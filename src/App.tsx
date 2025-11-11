@@ -108,14 +108,6 @@ function App() {
     setPasswords(items.map((item) => ({ ...item, value: item.generator() })))
   }
 
-  const regeneratePassword = (id: string) => {
-    setPasswords((prev) =>
-      prev.map((item) =>
-        item.id === id ? { ...item, value: item.generator() } : item
-      )
-    )
-  }
-
   useEffect(() => {
     generateAllPasswords()
   }, [])
@@ -153,7 +145,6 @@ function App() {
               title={password.title}
               description={password.description}
               value={password.value}
-              onRegenerate={() => regeneratePassword(password.id)}
             />
           ))}
         </div>
