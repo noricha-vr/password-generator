@@ -3,6 +3,20 @@
  */
 
 /**
+ * 現在時刻を YYYYMMDD-HHMMSS 形式でフォーマット
+ */
+function formatTimestamp(): string {
+  const now = new Date()
+  const year = now.getFullYear()
+  const month = String(now.getMonth() + 1).padStart(2, '0')
+  const day = String(now.getDate()).padStart(2, '0')
+  const hours = String(now.getHours()).padStart(2, '0')
+  const minutes = String(now.getMinutes()).padStart(2, '0')
+  const seconds = String(now.getSeconds()).padStart(2, '0')
+  return `${year}${month}${day}-${hours}${minutes}${seconds}`
+}
+
+/**
  * テキストをファイルとしてダウンロード
  */
 export function downloadAsTextFile(content: string, filename: string): void {
@@ -22,7 +36,8 @@ export function downloadAsTextFile(content: string, filename: string): void {
  */
 export function downloadPassword(title: string, value: string): void {
   const content = `${title}\n${'='.repeat(title.length)}\n\n${value}\n`
-  const filename = `password-${title.replace(/[^a-zA-Z0-9]/g, '-')}-${Date.now()}.txt`
+  const timestamp = formatTimestamp()
+  const filename = `${timestamp}.txt`
   downloadAsTextFile(content, filename)
 }
 
@@ -51,7 +66,7 @@ export function downloadAllPasswords(
     content += `   値: ${password.value}\n\n`
   })
 
-  const timestamp = Date.now()
-  const filename = `passwords-${timestamp}.txt`
+  const timestamp = formatTimestamp()
+  const filename = `${timestamp}.txt`
   downloadAsTextFile(content, filename)
 }
