@@ -124,16 +124,16 @@ function App() {
           </p>
           <div className="flex gap-4 justify-center">
             <button
-              onClick={generateAllPasswords}
-              className="bg-primary hover:bg-primary-hover text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-colors"
-            >
-              🔄 すべて再生成
-            </button>
-            <button
               onClick={() => downloadAllPasswords(passwords)}
               className="bg-secondary hover:bg-secondary-hover text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-colors"
             >
-              💾 すべてダウンロード
+              すべてダウンロード
+            </button>
+            <button
+              onClick={generateAllPasswords}
+              className="bg-primary hover:bg-primary-hover text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-colors"
+            >
+              すべて再生成
             </button>
           </div>
         </div>
