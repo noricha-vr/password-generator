@@ -88,3 +88,23 @@ export function generateMemorablePassword(): string {
 export function generatePIN(length: number = 6): string {
   return generateNumeric(length)
 }
+
+/**
+ * ローマ字単語を組み合わせたパスワードを生成
+ */
+export function generateRomajiPassword(): string {
+  const words = [
+    'sakura', 'tokyo', 'kyoto', 'hana', 'yama', 'kaze', 'mizu', 'sora',
+    'umi', 'tsuki', 'hoshi', 'yuki', 'matsu', 'fuji', 'nami', 'kawa',
+    'mori', 'tori', 'natsu', 'aki', 'haru', 'neko', 'inu', 'koi',
+    'cha', 'michi', 'niwa', 'ishi', 'kusa', 'tani', 'mine', 'kumo'
+  ]
+
+  const array = new Uint32Array(4)
+  crypto.getRandomValues(array)
+
+  const selectedWords = Array.from(array.slice(0, 3), (num) => words[num % words.length])
+  const number = array[3] % 1000
+
+  return selectedWords.join('-') + '-' + number
+}

@@ -9,6 +9,7 @@ import {
   generateBase64,
   generateMemorablePassword,
   generatePIN,
+  generateRomajiPassword,
 } from './utils/passwordGenerator'
 import { downloadAllPasswords } from './utils/downloadUtils'
 
@@ -99,6 +100,13 @@ function App() {
       title: '覚えやすいパスワード',
       description: '単語と数字の組み合わせ',
       generator: generateMemorablePassword,
+      value: '',
+    },
+    {
+      id: 'romaji',
+      title: 'ローマ字パスワード',
+      description: '日本語のローマ字と数字の組み合わせ',
+      generator: generateRomajiPassword,
       value: '',
     },
   ]
