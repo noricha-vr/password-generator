@@ -9,7 +9,8 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: deploy
+  # ref ごとに分ける。main 以外の ref の手動起動が main の配信をキャンセルしないようにするため
+  group: deploy-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
