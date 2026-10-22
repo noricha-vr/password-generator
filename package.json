@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "bun run typecheck && vite build",
+    "build": "node node_modules/@typescript/native/bin/tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "typecheck": "node node_modules/@typescript/native/bin/tsc -b"

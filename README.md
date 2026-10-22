@@ -134,3 +134,5 @@ Issue や Pull Request を歓迎します！
 ## 開発ツールの TypeScript 互換性
 
 `bun run typecheck` と `bun run build` は `@typescript/native` に固定した TypeScript 7.0.2 を使用します。ESLint はまだ TypeScript 7 のコンパイラAPIに対応していないため、`typescript` にはAPI互換の6.0.3を固定しています。コンパイラ選択を曖昧にしないよう、型検査は上記スクリプトから実行してください。
+
+`npm run build` も同じTypeScript 7コンパイラを直接呼びます。ビルド時のBun依存はありません。依存グラフの固定導入は引き続き `bun.lock` を使います。
