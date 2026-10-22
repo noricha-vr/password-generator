@@ -130,3 +130,7 @@ Issue や Pull Request を歓迎します！
 - [本番サイト](https://password-generator.kojin.works/)
 - [デモサイト（Cloudflare Pages）](https://password-generator.pages.dev)
 - [GitHubリポジトリ](https://github.com/noricha-vr/password-generator)
+
+## 開発ツールの TypeScript 互換性
+
+`bun run typecheck` と `bun run build` は `@typescript/native` に固定した TypeScript 7.0.2 を使用します。ESLint はまだ TypeScript 7 のコンパイラAPIに対応していないため、`typescript` にはAPI互換の6.0.3を固定しています。コンパイラ選択を曖昧にしないよう、型検査は上記スクリプトから実行してください。
