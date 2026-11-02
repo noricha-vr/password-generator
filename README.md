@@ -76,7 +76,7 @@ crypto.getRandomValues(array)
 
 ### 必要な環境
 
-- Node.js 20以上
+- Node.js 20系の20.19以上、または22.12以上
 - Bun 1.0以上（推奨）
 
 ### セットアップ
